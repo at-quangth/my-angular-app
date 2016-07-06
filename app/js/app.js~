@@ -10,7 +10,7 @@ var wfeApp = angular.module('wfeApp', [
 wfeApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when('/about', {
-      templateUrl: 'view/aboutme.html',
+      templateUrl: 'view/about.html',
       controller: 'AboutController',
     })
     // :codeName as going to stand for person identity
@@ -20,7 +20,7 @@ wfeApp.config(['$routeProvider', function ($routeProvider) {
     })
     // any link goes beyond defined routes will be redirected to /people route.
     .otherwise({
-      redirectTo: '/about',
+      redirectTo: '/people',
     });
 }]);
 

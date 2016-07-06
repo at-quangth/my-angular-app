@@ -38,18 +38,18 @@
 
     <div id="header">
       <div ng-controller="HeaderPartialCtrl">
-        <div ng-include src="'view/partials/header.html'"></div>
+        <div ng-include src="'view/partial/header.html'"></div>
       </div>
     </div>
     <div id="content">
-      <div class="container">
+      <div class="container-fluid no-padding">
       <!-- Routing defined view, this will load specified view for registered route/controller -->
         <div ng-view></div>
       </div>
     </div>
     <br>
     <div ng-controller="FooterPartialCtrl">
-      <div ng-include src="'view/partials/footer.html'"></div>
+      <div ng-include src="'view/partial/footer.html'"></div>
     </div>
 
 </body>
