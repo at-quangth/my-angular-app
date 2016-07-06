@@ -1,110 +1,22 @@
-# __`wfeApp`__ -  an AngularJS Tutorial Application
+# my-angular-app
 
-## Overview
+## Getting Started
 
-This application takes the developer through the process of building a web-application using Angular. The application is people directory of __Web Front End Department__ of [__Asian Tech Inc.__](http://asiantech.vn)
-
-Each tagged commit is a separate lesson teaching a single aspect of Angular.
-
-The tutorial based on http://docs.Angularjs.org/tutorial.
+To get you started you can simply clone the `my-angular-app` repository and install the dependencies:
 
 ## Prerequisites
 
 - Git
 - Node.js and tools (`npm`, `bower`,...)
 
-## Workings of the application
+### Clone app-template
 
-- The application filesystem layout structure is based on the [app-template](at-hungbcp/app-template) project.
-- There is no dynamic backend (no application server) for this application. Instead we fake the application server by fetching static `.json` files.
-- Read the Development section at the end to familiarize yourself with running and developing an Angular application.
+Clone the `my-angular-app` repository using `git`:
 
-## Commits / Tutorial Outline
-
-You can check out any point of the tutorial using
 ```bash
-git checkout step-?
+git clone https://github.com/at-quangth/my-angular-app.git
+cd my-angular-app
 ```
-
-To see the changes which between any two lessons use the git diff command.
-```bash
-git diff step-?..step-?
-```
-
-### `step-1`
-
-- Add `ngApp` directive to bootstrap the app.
-- Add simple template with an expression.
-
-### `step-2`
-
-- Add static `HTML` list with two people into `index.html`. We will convert this static page into dynamic one with the help of Angular.
-
-### `step-3`
-
-- Convert the static `HTML` list into dynamic one by:
-  - creating `PeopleListCtrl` controller for the application.
-  - extracting the data from HTML, moving it into the controller as an in-memory dataset.
-  - converting the static HTML document into an Angular template with the use of the `ngRepeat` directive which iterates over the dataset of people.
-  - `ngRepeat` clones its contents for each instance in the dataset and renders it into the view.
-
-### `step-4`
-
-- Add a search box to demonstrate how:
-  - the data-binding works on input fields.
-  - to use the `filter` filter.
-  - `ngRepeat` automatically shrinks and grows the number of people in the view.
-
-### `step-5`
-
-- Add `empCode` property to each person in the data model.
-- Add a `<select>` input to change the person list order.
-- Override the default order value in the controller.
-
-### `step-6`
-
-- Replace the in-memory dataset with data loaded from the server (in
-  the form of static `people.json` file).
-  - The `people.json` file is loaded using the `$http` service.
-- Demonstrate the use of `services` and `dependency injection` aka `DI`.
-  - The `$http` service is injected into the controller through `DI`.
-
-### `step-7`
-
-- Add person image and links to new pages that show the person details.
-- Add CSS to style the page just a notch.
-
-### `step-8`
-
-- Introduce the `$route` service which allows binding URLs for deep-linking with views:
-  - Create `PeopleListCtrl` which governs the entire app and contains $route configuration.
-  - Install `Angular-route` using bower and load the `ngRoute` module.   (Be sure to run `npm install` again.)
-  - Copy route parameters to root scope `params` property for access in sub controllers.
-  - Replace the contents of `index.html` with the `ngView` directive, which will display the partial template of the current route.
-- Create people list route:
-  - Map `/people` route to `PeopleListCtrl` and `view/people-list.html`.
-  - Preserve existing `PeopleListCtrl` controller.
-  - Move existing `.html` from `index.html` to `view/people-list.html`.
-- Create person details route:
-  - Map `/person/<person-id>` route to `PersonDetailCtrl` and `view/person-detail.html`.
-  - Create empty placeholder `PersonDetailsCtrl` controller.
-
-### `step-9`
-
-- Implement `PersonDetailCtrl` controller to fetch the details for a specific person from a `.json` file using `$http` service.
-- Update the template for the person detailed view.
-- Add CSS to make the person details page look "pretty".
-
-### `step-10`
-
-- Replace `$http` with `$resource`.
-- Created a custom `Person` service that represents the `$resource` client.
-
-----------
-
-## Developing AngularJS with __`wfeApp`__
-
-The following docs describe how you can test and develop further this application.
 
 ### Installing dependencies
 
@@ -187,3 +99,4 @@ For more information on AngularJS please check out http://angularjs.org/
 - `protractor`: https://github.com/Angular/protractor
 - `jasmine`: http://pivotal.github.com/jasmine/
 - `karma`: http://karma-runner.github.io
+
