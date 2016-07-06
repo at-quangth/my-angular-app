@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/at-hungbcp/angular-starter-app.git"
+    "url": "https://github.com/at-quangth/my-angular-app.git"
   },
-  "author": "Hung BCP",
+  "author": "Quang TH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/at-hungbcp/angular-starter-app/issues"
+    "url": "https://github.com/at-quangth/my-angular-app/issues"
   },
-  "homepage": "https://github.com/at-hungbcp/angular-starter-app#readme",
+  "homepage": "https://github.com/at-quangth/my-angular-app/blob/master/README.md",
   "private": true,
   "devDependencies": {
     "bower": "^1.7.7",

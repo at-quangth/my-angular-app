@@ -1,0 +1,15 @@
+{
+    	"fullname": "Trần Hữu Quang",
+    	"birthday": "15/1/1991",
+        "picture": "http://localhost:8000/img/quang.jpg",
+    	"gender": "Male",
+    	"nativeland": "TT Hue",
+    	"job": "Intership",
+    	"team": "Team Php",
+    	"email": "huuquangbk151@gmail.com",
+    	"phone": "(+84) 122 552 7432",
+    	"github": "at-quangth",
+        "skype": "dongvd.asiantech",
+    	"urlgit": "https://github.com/at-quangth",
+    	
+}

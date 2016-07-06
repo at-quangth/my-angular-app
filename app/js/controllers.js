@@ -5,36 +5,13 @@ var wfeControllers = angular.module('wfeControllers', []);
 
 // PeopleListCtrl for people listing page which detached from index.html in
 // previous steps.
-wfeControllers.controller('PeopleListCtrl', ['$scope', 'Person',
-  function ($scope, Person) {
-    // So, we do query and get expected data back
-    $scope.people = Person.query(function (data) {
-      angular.forEach(data, function (value, key) {
-        if (!value.image) {
-          value.image = 'http://placehold.it/200?text=' + value.fullName;
-        }
+wfeControllers.controller('AboutController', ['$scope', '$http',
+  function ($scope, $http) {
+    // Controller method for About
+    var url = 'http://localhost:8000/data/profile.json';   
+  $http.get(url).success(function(response) {
+    $scope.profile = response;
+  });
+}]);
 
-        // We get :codeName from username of workEmail
-        value.codeName = value.workEmail.split('@')[0];
-      });
-    });
 
-    $scope.order = 'empCode';
-
-  }
-]);
-
-// Controller for person detail page, in additional to Person, we use $routeParams
-// which retrieves our :codeName in the url to indecate specified person.
-wfeControllers.controller('PersonDetailCtrl', ['$scope', '$routeParams', 'Person',
-  function ($scope, $routeParams, Person) {
-    $scope.person = Person.get({
-      requestParam: 'people/' + $routeParams.codeName
-    }, function (person) {
-      if (!person.image) {
-        person.image = 'http://placehold.it/200?text=' + person.fullName;
-      }
-    });
-
-  }
-]);

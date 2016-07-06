@@ -1,12 +1,12 @@
 {
   "name": "starter-app",
   "version": "0.0.1",
-  "description": "The name is wfeApp, which is an AngularJS Tutorial Application.",
+  "description": "The name is wfeApp, which is an AngularJS Application.",
   "authors": [
-    "Hung BCP"
+    "Quang TH"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/at-hungbcp/angular-starter-app",
+  "homepage": "https://github.com/at-quangth/my-angular-app",
   "private": true,
   "ignore": [
     "**/.*",
