@@ -1,0 +1,18 @@
+<div ng-controller="ShowOrderController" ng-repeat="car in cars | filter: { Brand: brandname } | limitTo:1"
+>
+<ul>
+	<li ng-repeat="caritem in car">{{caritem.Model}}</li>
+</ul>
+<!-- <h2>Car: {{car.Brand}}</h2>
+
+<p>Car Specs:</p>
+<ol>
+<li>Model: {{car.Model}}</li>
+<li>Year: {{car.Year}}</li>
+<li>Motor: {{car.Motor}}</li>
+<li>Pk: {{car.Pk}}</li>
+<li>Price:{{car.Price}}</li>
+</ol>
+ -->
+
+</div>

@@ -13,5 +13,49 @@ wfeControllers.controller('AboutController', ['$scope', '$http',
     $scope.profile = response;
   });
 }]);
+wfeControllers.controller('ListProductController',['$scope','$http','$routeParams','$window',function($scope, $http, $routeParams,$window) {
 
+  $http.get('http://localhost:8000/data/cars.json').
+    then(function(response){
+      $scope.products = response.data;
+      $scope.productId=$routeParams.carId;
+    });
+    
+    
+    $scope.isFibonacci = function(x){
+      var a= $window.Math.sqrt(5*x*x+4);
+      var b= $window.Math.sqrt(5*x*x-4);
+
+        if(a*a==x||b*b==x){
+            $scope.message=$scope.number+" is a Fibonacci number";
+        }else {
+            $scope.message=$scope.number+" is not a Fibonacci number";
+    }
+    };
+    $scope.isPerfectSquare = function(n){
+           var a= $window.Math.sqrt(n);
+           // console.log(a);
+           return (a*a == n); 
+    //          if(a*a== n){
+    //   $scope.message=$scope.number+"is Fibonacci";
+    // }else {
+    //   $scope.message="is not Fibonacci";
+    // }    
+    };
+    // if(($scope.number)/2){
+    //   $scope.message="is Fibonacci";
+    // }else {
+    //   $scope.message="is not Fibonacci";
+    // }
+	 
+}]);
+wfeControllers.controller('ShowItemDetailController', function($scope, $http, $routeParams) {
+
+  $http.get('http://localhost:8000/data/cars.json').
+    then(function(response){
+      $scope.cars = response.data;
+      $scope.brandname=$routeParams.brandName;
+    });
+	 
+});
 

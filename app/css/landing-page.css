@@ -80,6 +80,13 @@ ul#favorite li{
 .section-heading{
     margin-left: 30px;
 }
+.panel-group .panel + .panel {
+    margin-top: 0px;
+}
+#accordion div.col-sm-4{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
 @media(max-width:767px) {
     .intro-message {
