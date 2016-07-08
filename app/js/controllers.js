@@ -3,8 +3,7 @@
 // App controllers, it coming in handy module for DI
 var wfeControllers = angular.module('wfeControllers', []);
 
-// PeopleListCtrl for people listing page which detached from index.html in
-// previous steps.
+// AboutController for about me page 
 wfeControllers.controller('AboutController', ['$scope', '$http',
   function ($scope, $http) {
     // Controller method for About
@@ -13,12 +12,15 @@ wfeControllers.controller('AboutController', ['$scope', '$http',
     $scope.profile = response;
   });
 }]);
+
+//ListProductController for show two app
+//--1th app : check number is a Fibonacci ?
+//--2th app : list product type
 wfeControllers.controller('ListProductController',['$scope','$http','$routeParams','$window',function($scope, $http, $routeParams,$window) {
 
   $http.get('http://localhost:8000/data/products.json').
         then(function(response){
           $scope.products = response.data;
-          $scope.productId=$routeParams.carId;
         });
   $scope.isFibonacci = function(x){
     var a= parseInt($window.Math.sqrt(5*x*x + 4));
@@ -30,12 +32,13 @@ wfeControllers.controller('ListProductController',['$scope','$http','$routeParam
     }
   };
 }]);
+
+//ShowItemDetailController for show detail of product
 wfeControllers.controller('ShowItemDetailController',['$scope','$http','$routeParams', function($scope, $http, $routeParams) {
   $scope.requestParam='product/'+$routeParams.itemName;
   $http.get('http://localhost:8000/data/'+$scope.requestParam+'.json').
     then(function(response){
       $scope.item = response.data;
-      // $scope.brandname=$routeParams.brandName;
     });
 	 
 }]);
