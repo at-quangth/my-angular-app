@@ -87,7 +87,22 @@ ul#favorite li{
     padding-left: 0px;
     padding-right: 0px;
 }
-
+#app1,#app2>.section-heading{
+    margin-left: 0px;
+}
+.panel-body{
+    margin-left: 30px;
+    padding-left: 0px;
+}
+#accordion h4{
+    font-size: 20px;
+}
+#accordion #listpd{
+    font-size: 16px;
+}
+#pic{
+    margin-top: 50px;
+}
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -160,6 +175,14 @@ ul#favorite li{
 .banner-social-buttons {
     float: right;
     margin-top: 0;
+}
+#app1{
+    background: url("../img/background_app1.jpg") no-repeat center center;
+    height: auto;
+}
+#app2{
+    background: url("../img/background_app2.jpg") no-repeat center center;
+    height: auto;
 }
 
 @media(max-width:1199px) {
