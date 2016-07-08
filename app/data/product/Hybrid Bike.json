@@ -1,7 +1,8 @@
 {
 	"name": "Hybrid Bike",
+	"brand": "Bike",
 	"introduce": "Là sự kết hợp giữa Road và MTB, xe đạp thành phố (Hybrid bike) có thiết kế đa năng nên sử dụng được ở cả nội và ngoại thành. Với khung thanh mảnh, lốp êm, được trang bị giảm xóc trước, Hybrid bike là lựa chọn tốt để đi trong thành phố với tốc độ cao và thoải mái. Do sở hữu ưu điểm của cả hai loại xe trên nên chiếc Hybrid sẽ đi nhanh hơn MTB trên những cung đường ngắn và bằng phẳng, lại có thể dễ dàng vượt qua những đoạn đường xấu.",
 	"advantages": "nhẹ, dễ dàng xử lý, có thể vượt qua các chặng đường gồ ghề song vẫn đạt được tốc độ cần thiết. Góc cổ hẹp, tuy tăng tốc kém hơn Road Bike nhưng lại dễ điều khiển và rẽ ngoặt. Tay lái thẳng giúp tạo thế ngồi thẳng hơn và có viền chắn bùn.",
 	"disadvantages" : "mặc dù có thiết kế tương đối tối ưu, song xe đạp thành phố (Hybrid bike) không phải là lựa chọn thích hợp để leo núi hoặc chinh phục các địa hình khó khăn.",
-	"image" : "Wolkswagen"
+	"image" : "hybrid-bike-(1).jpg"
 }
