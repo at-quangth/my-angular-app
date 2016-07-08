@@ -4,8 +4,7 @@
 var myApp = angular.module('myApp', [
   'ngRoute', // All routing, navigating in the app goes here
   'wfeControllers', // Our beloved controller module collection
-  'ngAnimate',
-  'ui.bootstrap'
+  
 ]);
 
 myApp.config(['$routeProvider', function ($routeProvider) {

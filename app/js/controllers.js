@@ -21,22 +21,22 @@ wfeControllers.controller('ListProductController',['$scope','$http','$routeParam
           $scope.productId=$routeParams.carId;
         });
   $scope.isFibonacci = function(x){
-    var a= $window.Math.sqrt(5*x*x+4);
-    var b= $window.Math.sqrt(5*x*x-4);
-    if(a*a==x||b*b==x){
+    var a= parseInt($window.Math.sqrt(5*x*x + 4));
+    var b= parseInt($window.Math.sqrt(5*x*x - 4));
+    if(a*a==(5*x*x+4)||b*b==(5*x*x-4)){
         $scope.message=$scope.number+" is a Fibonacci number";
     }else {
         $scope.message=$scope.number+" is not a Fibonacci number";
     }
   };
 }]);
-wfeControllers.controller('ShowItemDetailController', function($scope, $http, $routeParams) {
-
-  $http.get('http://localhost:8000/data/products.json').
+wfeControllers.controller('ShowItemDetailController',['$scope','$http','$routeParams', function($scope, $http, $routeParams) {
+  $scope.requestParam='product/'+$routeParams.itemName;
+  $http.get('http://localhost:8000/data/'+$scope.requestParam+'.json').
     then(function(response){
-      $scope.cars = response.data;
-      $scope.brandname=$routeParams.brandName;
+      $scope.item = response.data;
+      // $scope.brandname=$routeParams.brandName;
     });
 	 
-});
+}]);
 

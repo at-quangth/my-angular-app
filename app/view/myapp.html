@@ -1,35 +1,60 @@
-
-<!-- <ul  style="margin-top: 100px;">
-   <li ng-repeat="car in cars"><a href="#ShowOrder/{{car.Brand}}">
-   {{car.Brand}}</a>
-     <ul><li ng-repeat="list in car.List"><a href="#ShowOrder/{{car.Brand}}">
-     {{list.id}}</a></ul>
-   </li>
-   </li>
- </ul> -->
-
-<div class="container" style="margin-top: 100px;" ng-controller="ListProductController">
-
-  Number: <input ng-model="number">
-  <button ng-click="isFibonacci(number)">Check</button>
-   <h1>You entered: {{message}}</h1>
-  <h2>Popular product in 2016</h2>
-  <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default col-sm-4" ng-repeat="product in products">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#{{product.Brand}}">{{product.Brand}}</a>
-        </h4>
+<div class="container-fluid" style="margin-top: 100px;" ng-controller="ListProductController">
+  <div id="app1"class="" >
+      <div class="container-fluid no-padding">
+          <div class="row">
+              <div class="col-lg-8 col-sm-8">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading">First App</h2>
+                  <p>This app is used to check a number that you enter is a Fibonacci number.</p>
+                  <div class="panel-body">
+                    Number: <input ng-model="number">
+                    <button ng-click="isFibonacci(number)">Check</button>
+                    <h3>You entered: {{message}}</h3>
+                  </div>
+              </div>
+              <div class="col-lg-5 col-lg-offset-2 col-sm-4">
+                  <img class="img-responsive" src="" alt="">
+              </div>
+          </div>
       </div>
-      <div id="{{product.Brand}}" class="panel-collapse collapse in">
-        <ul class="list-group" >
-          <li class="list-group-item" ng-repeat="item in product.List"><a href="#ShowOrder/{{item.name}}">
-       {{item.name}}</a></li>
-      </ul>
+        <!-- /.container -->
+  </div>
+
+  <!--fghghgh-->
+<div id="app2" class="">
+    <div class="container-fluid no-padding">
+        <div class="row" style="padding-bottom: 20px;">
+          <!-- <div class="col-lg-12 col-sm-12" style="padding-bottom: 20px;"> -->
+              <div class="col-lg-4 col-sm-4">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading">Second App</h2>
+                  <p>This app is list all type of product, and we can click to see detail of each type.</p>
+              </div>
+              <div class="col-lg-8 col-sm-8">
+              <h2>Popular Product Type in 2016</h2>
+              <p><strong>Note:</strong> This table helps you to decide what product you want to choose. It's usefull</p>
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default col-sm-4" ng-repeat="product in products">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="">{{product.Brand}}</a>
+                    </h4>
+                  </div>
+                  <div id="{{product.Brand}}" class="panel-collapse collapse in">
+                    <ul class="list-group" id="listpd">
+                      <li class="list-group-item" ng-repeat="item in product.List"><a href="#/Product/{{product.Brand}}/{{item.name}}">
+                  {{item.name}}</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          <!-- </div> -->
+        </div>
       </div>
     </div>
-  </div> 
 </div>
 <!-- <div class="row">
   Number: <input ng-model="number">

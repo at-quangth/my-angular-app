@@ -1,18 +1,29 @@
-<div ng-controller="ShowOrderController" ng-repeat="car in cars | filter: { Brand: brandname } | limitTo:1"
+<!-- <div ng-repeat="car in cars | filter: { Brand: brandname } | limitTo:1"
 >
 <ul>
 	<li ng-repeat="caritem in car">{{caritem.Model}}</li>
-</ul>
-<!-- <h2>Car: {{car.Brand}}</h2>
+</ul> -->
+<!-- <h2>Name: {{item.name}}</h2>
 
 <p>Car Specs:</p>
 <ol>
-<li>Model: {{car.Model}}</li>
-<li>Year: {{car.Year}}</li>
-<li>Motor: {{car.Motor}}</li>
-<li>Pk: {{car.Pk}}</li>
-<li>Price:{{car.Price}}</li>
-</ol>
- -->
+<li>Introduce: {{item.introduce}}</li>
+<li><img class="img-responsive" src="img/{{item.image}}" alt=""></li>
+</ol> -->
 
+<div class="content-section-a" style="margin-top: 100px;">
+    <div class="container-fluid no-padding">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">{{item.name}}</h2>
+                <p class="lead">{{item.introduce}}</p>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img id="pic" class="img-responsive" src="img/{{item.image}}" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
 </div>
